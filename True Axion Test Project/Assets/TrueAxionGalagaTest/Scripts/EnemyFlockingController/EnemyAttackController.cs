@@ -11,7 +11,7 @@ public class EnemyAttackController : MonoBehaviour
     //list that store all enemies
     [HideInInspector]public List<EnemyAgent> enemyList;
 
-    [Tooltip("spawn frequency. the higher the more frequent")]
+    [Tooltip("call enemy to attack frequency. the higher the more frequent")]
     public float callAttackRate = 2.0f;
     float callAttackTime = 0.0f;
     float callAttackCount = 0.0f;
