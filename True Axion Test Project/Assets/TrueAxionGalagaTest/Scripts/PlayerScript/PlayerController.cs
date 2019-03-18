@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     bool isKilled = false;
 
     //Game Manager Component needed for updating lives and score UI
-    [HideInInspector]public GameManager GM;
+    [HideInInspector]public GameManager gameManager;
 
     [Tooltip("Store the above position of player")]
     public GameObject abovePlayerPosition;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GM = FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
 
         //Restric Area That Players Can Go
         minViewport = Camera.main.ViewportToWorldPoint(new Vector2(0, 0));
@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
             //If lives is less than , call game manager and set "gameOver" to true
             if (lives <= 0)
             {
-                GM.SetGameOver(true);
+                gameManager.SetGameOver(true);
             }
         }
 
