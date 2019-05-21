@@ -153,7 +153,7 @@ MonoBehaviour:
     type: 3}
   fireRate: 1
   ammo: 0
-  maxRocketsAmount: 2
+  maxRocketsAmount: 3
   currentRocketAmount: 0
 --- !u!1 &8362276090687164576
 GameObject:
